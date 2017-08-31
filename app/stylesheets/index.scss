@@ -1,7 +1,66 @@
-body {
-  background: green;
+html,body {
+  font-family: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif";
+}
 
-  &.isColor {
-    background: blue;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.MainApp {
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.Languages {
+  display: flex;
+  justify-content: center;
+
+  li {
+    margin: 10px;
+    cursor: pointer;
+    font-weight: bold;
+
+    &.selected {
+      color: #bada55;
+    }
   }
+}
+
+.RepoList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.Repo {
+  margin: 20px;
+  text-align: center;
+}
+
+.space-list-items {
+  margin-bottom: 7px;
+}
+
+.rank {
+  font-size: 20px;
+  margin: 2px;
+}
+
+.avatar {
+  width: 150px;
+  border-radius: 50%;
 }
