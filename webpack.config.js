@@ -6,7 +6,8 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const entry = './app/index.js';
 const output = {
   path: path.resolve(__dirname, 'dist'),
-  filename: 'index_bundle.js'
+  filename: 'index_bundle.js',
+  publicPath: '/'
 };
 
 const modules = {
@@ -26,6 +27,10 @@ const modules = {
   ]
 };
 
+const devServer = {
+  historyApiFallback: true
+};
+
 const plugins = [
   new HtmlWebpackPlugin({
   template: 'app/index.html'
@@ -41,5 +46,6 @@ module.exports = {
   entry,
   output,
   module: modules,
+  devServer,
   plugins
 }
